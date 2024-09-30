@@ -3,84 +3,6 @@
 
 using namespace std;
 
-void multiplication();
-void Division();
-void Addition();
-void Subtraction();
-void Power();
-void Factorial();
-
-//mainBlock
-int calculatorBlock() {
-
-loopAgain:
-	system("cls");
-
-	cout << "\n\n\t\t\tCalculator on C++" << endl;
-	cout << "\t\t\t-----------------" << endl;
-	cout << "\t\t\t1.Multiplication\n"
-		"\t\t\t2.Division\n"
-		"\t\t\t3.Addition\n"
-		"\t\t\t4.Subtraction\n"
-		"\t\t\t5.Any power of a number\n"
-		"\t\t\t6.Factorial\n"
-		"\t\t\t7.Exit\n";
-
-	int varPick;
-
-	cout << "\n\t\t\tPlease enter your choice: ";
-
-	while (!(cin >> varPick)) {
-		cin.clear();
-		cin.ignore(132, '\n');
-		goto loopAgain;
-	}
-
-	switch (varPick)
-	{
-	case 1:
-		multiplication();
-		goto loopAgain;
-		break;
-
-	case 2:
-		Division();
-		goto loopAgain;
-		break;
-
-	case 3:
-		Addition();
-		goto loopAgain;
-		break;
-
-	case 4:
-		Subtraction();
-		goto loopAgain;
-		break;
-
-	case 5:
-		Power();
-		goto loopAgain;
-		break;
-
-	case 6:
-		Factorial();
-		goto loopAgain;
-		break;
-
-	case 7:
-		exit(0);
-		break;
-
-	default:
-		cout << "\n\t\t\tInvalid pick,try again.";
-		Sleep(2000);
-		goto loopAgain;
-		break;
-	}
-
-	return 0;
-}
 //mulFunction
 void multiplication() {
 
@@ -332,4 +254,75 @@ askAgain:
 ext:
 
 	return;
+}
+//mainBlock
+int calculatorBlock() {
+
+loopAgain:
+	system("cls");
+
+	cout << "\n\n\t\t\tCalculator on C++" << endl;
+	cout << "\t\t\t-----------------" << endl;
+	cout << "\t\t\t1.Multiplication\n"
+		"\t\t\t2.Division\n"
+		"\t\t\t3.Addition\n"
+		"\t\t\t4.Subtraction\n"
+		"\t\t\t5.Any power of a number\n"
+		"\t\t\t6.Factorial\n"
+		"\t\t\t7.Exit\n";
+
+	int varPick;
+
+	cout << "\n\t\t\tPlease enter your choice: ";
+
+	while (!(cin >> varPick)) {
+		cin.clear();
+		cin.ignore(132, '\n');
+		goto loopAgain;
+	}
+
+	switch (varPick)
+	{
+	case 1:
+		multiplication();
+		goto loopAgain;
+		break;
+
+	case 2:
+		Division();
+		goto loopAgain;
+		break;
+
+	case 3:
+		Addition();
+		goto loopAgain;
+		break;
+
+	case 4:
+		Subtraction();
+		goto loopAgain;
+		break;
+
+	case 5:
+		Power();
+		goto loopAgain;
+		break;
+
+	case 6:
+		Factorial();
+		goto loopAgain;
+		break;
+
+	case 7:
+		exit(0);
+		break;
+
+	default:
+		cout << "\n\t\t\tInvalid pick,try again.";
+		Sleep(2000);
+		goto loopAgain;
+		break;
+	}
+
+	return 0;
 }
